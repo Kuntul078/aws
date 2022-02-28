@@ -32,9 +32,6 @@ apt dist-upgrade -y
 apt -y install wget curl
 apt-get install screen -y 
 
-# remove any old and not use 
-apt-get autoclean && apt-get autoremove -y
-
 clear
 cd
 # Checking VPS ( if fresh or used vps before excute another )..
@@ -112,16 +109,6 @@ wget https://raw.githubusercontent.com/${GitUser}/aws/main/install/ssr.sh && chm
 wget https://raw.githubusercontent.com/${GitUser}/aws/main/install/shadowsocksobfs.sh && chmod +x shadowsocksobfs.sh && screen -S shadowsocksobfs.sh ./shadowsocksobfs.sh
 wget https://raw.githubusercontent.com/${GitUser}/aws/main/install/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' /root/ins-vt.sh && screen -S v2ray.sh ./ins-vt.sh
 wget https://raw.githubusercontent.com/${GitUser}/aws/main/install/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec.sh ./ipsec.sh
-
-# Remove script has installed
-rm -f /root/ssh-vpn.sh
-rm -f /root/websocket.sh
-rm -f /root/sstp.sh
-rm -f /root/wg.sh
-rm -f /root/ssr.sh
-rm -f /root/shadowsocksobfs.sh
-rm -f /root/ins-vt.sh
-rm -f /root/ipsec.sh
 
 history -c
 echo "2.1" >> /home/ver
