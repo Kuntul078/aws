@@ -46,8 +46,8 @@ if [[ ! -e /etc/v2ray ]]; then
     mkdir /etc/v2ray
 else
     mkdir /etc/v2ray
-fi
-fi [[ ! -e /var/lib/premium-script/ipvps.conf ]]; then
+if
+if [[ ! -e /var/lib/premium-script/ipvps.conf ]]; then
     echo -e "          ${blue}Hello Stranger , thanks using my-repo${NC}" 
     echo -e "    ${red}It's seem you have installed kind vpn script before"
     echo -e "  Auto-Script will remove your current configuration folder"
@@ -61,7 +61,7 @@ fi [[ ! -e /var/lib/premium-script/ipvps.conf ]]; then
     mkdir /var/lib/premium-script
 else
     mkdir /var/lib/premium-script
-fi
+if
 clear
 echo -e ""
 echo -e "\e[1;104m\e[31m=============================================================================\e[0m"
